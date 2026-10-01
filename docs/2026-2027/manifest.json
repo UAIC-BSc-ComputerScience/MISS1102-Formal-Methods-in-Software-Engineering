@@ -1,0 +1,54 @@
+{
+  "retrieved": "2026-10-01",
+  "source": "https://edu.info.uaic.ro/metode-formale-inginerie-software/",
+  "files": [
+    {
+      "path": "course/eng/2026-2027/01-introduction/lecture-notes.pdf",
+      "source": "https://edu.info.uaic.ro/metode-formale-inginerie-software/2026/01-introduction/lecture-notes.pdf",
+      "bytes": 54187,
+      "sha256": "c0f130b5d3dcf5b50ca08b5e4d9b4d9644c99aa92585506c200ff042ccc5eb26"
+    },
+    {
+      "path": "course/eng/2026-2027/01-introduction/slides.pdf",
+      "source": "https://edu.info.uaic.ro/metode-formale-inginerie-software/2026/01-introduction/slides.pdf",
+      "bytes": 416593,
+      "sha256": "f71bbd274587df38c35c3a942a3677cf41723bc5b41878230ec806ba1b85fca4"
+    },
+    {
+      "path": "lab/2026-2027/01-introduction/lab.pdf",
+      "source": "https://edu.info.uaic.ro/metode-formale-inginerie-software/2026/01-introduction/lab.pdf",
+      "bytes": 77090,
+      "sha256": "924d89b635b1c529f7caa07daf93ed81fb3250394be9f0406c05c5c933431c45"
+    },
+    {
+      "path": "docs/2026-2027/fisa-ISS.pdf",
+      "source": "https://edu.info.uaic.ro/metode-formale-inginerie-software/2026/fisa-ISS.pdf",
+      "bytes": 347225,
+      "sha256": "70342f3b33c7fb667b6ca92dda28445d0713437e6fe1e19cf01f62ae9f5b81f3"
+    },
+    {
+      "path": "docs/2026-2027/fisa-SAI1.pdf",
+      "source": "https://edu.info.uaic.ro/metode-formale-inginerie-software/2026/fisa-SAI1.pdf",
+      "bytes": 350054,
+      "sha256": "ccd55774da6df7fa42b19def72838a6d28f56d579f279efecb1ec8a7d5aac068"
+    },
+    {
+      "path": "docs/2026-2027/fisa-SAI2.pdf",
+      "source": "https://edu.info.uaic.ro/metode-formale-inginerie-software/2026/fisa-SAI2.pdf",
+      "bytes": 348212,
+      "sha256": "f125655cec77bd4052b8ab6d474cbe8a17c50548e02850e626c87e425f2b8b99"
+    },
+    {
+      "path": "project/2026-2027/projects.pdf",
+      "source": "https://edu.info.uaic.ro/metode-formale-inginerie-software/projects.pdf",
+      "bytes": 167227,
+      "sha256": "1a41073803274f93de93df07ef8e98718f02708c99acf75b7caae9aabba8c6d0"
+    },
+    {
+      "path": "bibliography/TheFormalSemanticsOfProgrammingLanguages.pdf",
+      "source": "https://www.cin.ufpe.br/~if721/intranet/TheFormalSemanticsofProgrammingLanguages.pdf",
+      "bytes": 6539878,
+      "sha256": "64efdb7c7a01c3cee0cb51532edd02f3109d5a700cf1ca5030cbfe4b9e38531e"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formal Methods in Software Engineering — FII, UAIC</title>
+<meta name="description" content="Formal Methods in Software Engineering — Faculty of Computer Science, Alexandru Ioan Cuza University of Iași.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#22262e; --muted:#6b7280; --border:#e8e8ec;
+    --accent:#2c5fb3; --soft:#f6f7f9; --warn:#8a5a00;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#12151a; --fg:#dfe3ea; --muted:#9aa1ad; --border:#262b33;
+      --accent:#7fa6e8; --soft:#171b21; --warn:#d8ab5f;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:0 16px}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header{padding:40px 0 18px; border-bottom:1px solid var(--border)}
+  .kicker{color:var(--muted); font-size:13px; letter-spacing:.02em}
+  h1{font-size:28px; line-height:1.2; margin:6px 0 4px; font-weight:700}
+  .former{color:var(--muted); font-size:14px; margin:0}
+  .who{margin:14px 0 0; font-size:14px; color:var(--muted)}
+  .who b{color:var(--fg); font-weight:600}
+  nav{margin-top:16px; font-size:14px; display:flex; flex-wrap:wrap; gap:14px}
+  nav a{color:var(--muted)}
+  nav a:hover{color:var(--accent)}
+
+  section{padding:26px 0; border-bottom:1px solid var(--border)}
+  h2{font-size:18px; margin:0 0 8px; font-weight:700}
+  h3{font-size:15px; margin:16px 0 4px; font-weight:600}
+  p{margin:.5em 0}
+  .muted{color:var(--muted)}
+  ul{margin:.4em 0; padding-left:1.25em}
+  li{margin:.2em 0}
+
+  table{border-collapse:collapse; width:100%; font-size:14.5px; margin-top:8px}
+  th,td{text-align:left; padding:8px 8px; border-bottom:1px solid var(--border); vertical-align:top}
+  thead th{color:var(--muted); font-weight:600; font-size:13px}
+  td.wk{color:var(--muted); width:32px; white-space:nowrap}
+  .mat a{margin-right:10px; white-space:nowrap}
+  tr.off td{color:var(--warn)}
+
+  .lock{font-size:13px; color:var(--muted); background:var(--soft);
+    border:1px solid var(--border); border-radius:8px; padding:8px 12px; margin-top:10px}
+  ol.refs{padding-left:1.4em; font-size:14.5px}
+  ol.refs li{margin:.45em 0}
+  .refs .by{color:var(--muted)}
+  .years a{margin-right:14px}
+  footer{padding:24px 0 48px; color:var(--muted); font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Faculty of Computer Science · Alexandru Ioan Cuza University of Iași</div>
+  <h1>Formal Methods in Software Engineering</h1>
+  <p class="who"><b>Course &amp; labs:</b> Dr. Andrei Arusoaie</p>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#tools">Tools</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#evaluation">Evaluation</a>
+    <a href="#resources">Resources</a>
+    <a href="#people">People</a>
+    <a href="#years">Past years</a>
+  </nav>
+</header>
+
+<section id="overview">
+  <h2>Overview</h2>
+  <p>This course is about applying <b>formal methods</b> to real software: the
+  mathematical and logical techniques that let us <em>specify</em> precisely what a
+  program should do and then <em>prove</em> that it does it. The emphasis is
+  practical — we write specifications, verify programs with tools, and reason about
+  their correctness — so that the ideas are usable by engineers, not only by
+  specialists.</p>
+
+  <h3>What we cover</h3>
+  <ul>
+    <li><b>Formal systems and proofs:</b> languages, inference rules,
+        propositional logic, and rigorous proofs</li>
+    <li>Operational semantics of a simple imperative language</li>
+    <li>Hoare logic and the weakest-precondition / strongest-postcondition calculi</li>
+    <li><b>Dafny</b>, a verification-aware language: contracts
+        (<code>requires</code>/<code>ensures</code>), loop invariants, and
+        SMT-backed automated verification</li>
+    <li><b>Lean 4</b>, an interactive theorem prover: functional programming,
+        proofs by induction, and certified algorithms</li>
+    <li>Certified compilation and type systems</li>
+    <li>Introduction to static analysis</li>
+  </ul>
+</section>
+
+<section id="tools">
+  <h2>Tools and Resources</h2>
+  <ul>
+    <li><a href="https://dafny.org">Dafny</a> — verification-aware programming language
+        (<a href="https://dafny.org/teaching-material/">teaching material</a>)</li>
+    <li><a href="https://lean-lang.org">Lean 4</a> — interactive theorem prover and programming language</li>
+    <li>Course notes and slides (per week, below)</li>
+    <li>Timetable: <a href="https://edu.info.uaic.ro/orar/discipline/orar_mfis.html">official schedule (orar)</a></li>
+    <li>Discord for questions and announcements <span class="muted">(link shared in class)</span></li>
+  </ul>
+</section>
+
+<section id="schedule">
+  <h2>Weekly schedule</h2>
+  <!-- Materials are released week by week. To hide a not-yet-covered week's
+       files, delete (or comment out) the links in its "Materials" cell. -->
+  <table>
+    <thead><tr><th>Wk</th><th>Topic</th><th>Materials</th></tr></thead>
+    <tbody>
+      <tr><td class="wk">1</td><td>Introduction and motivation</td>
+        <td class="mat"><a href="2026/01-introduction/lecture-notes.pdf">notes</a><a href="2026/01-introduction/slides.pdf">slides</a><a href="2026/01-introduction/lab.pdf">lab</a></td></tr>
+      <!-- <tr><td class="wk">2</td><td>Formal systems, inference rules, and proofs</td>
+        <td class="mat"><a href="2026/02-formal-systems/lecture-notes.pdf">notes</a><a href="2026/02-formal-systems/slides.pdf">slides</a><a href="2026/02-formal-systems/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">3</td><td>Syntax and operational semantics</td>
+        <td class="mat"><a href="2026/03-operational-semantics/lecture-notes.pdf">notes</a><a href="2026/03-operational-semantics/slides.pdf">slides</a><a href="2026/03-operational-semantics/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">4</td><td>Hoare logic and the weakest-precondition calculus</td>
+        <td class="mat"><a href="2026/04-hoare-logic/lecture-notes.pdf">notes</a><a href="2026/04-hoare-logic/slides.pdf">slides</a><a href="2026/04-hoare-logic/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">5</td><td>The weakest-precondition calculus</td>
+        <td class="mat"><a href="2026/05-weakest-precondition/lecture-notes.pdf">notes</a><a href="2026/05-weakest-precondition/slides.pdf">slides</a><a href="2026/05-weakest-precondition/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">6</td><td>The strongest-postcondition calculus</td>
+        <td class="mat"><a href="2026/06-strongest-postcondition/lecture-notes.pdf">notes</a><a href="2026/06-strongest-postcondition/slides.pdf">slides</a><a href="2026/06-strongest-postcondition/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">7</td><td>A verified quicksort: more on proofs</td>
+        <td class="mat"><a href="2026/07-verified-quicksort/lecture-notes.pdf">notes</a><a href="2026/07-verified-quicksort/slides.pdf">slides</a><a href="2026/07-verified-quicksort/lab.pdf">lab</a></td></tr>
+      <tr class="off"><td class="wk">8</td><td>Homework — report &amp; implementation (no lecture)</td><td>submission in class</td></tr>
+      <tr><td class="wk">9</td><td>Interactive theorem proving in Lean 4</td>
+        <td class="mat"><a href="2026/09-interactive-provers/lecture-notes.pdf">notes</a><a href="2026/09-interactive-provers/slides.pdf">slides</a><a href="2026/09-interactive-provers/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">10</td><td>Writing proofs in Lean 4</td>
+        <td class="mat"><a href="2026/10-proofs-in-lean/lecture-notes.pdf">notes</a><a href="2026/10-proofs-in-lean/slides.pdf">slides</a><a href="2026/10-proofs-in-lean/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">11</td><td>Induction and other proof techniques</td>
+        <td class="mat"><a href="2026/11-induction/lecture-notes.pdf">notes</a><a href="2026/11-induction/slides.pdf">slides</a><a href="2026/11-induction/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">12</td><td>Certified compilation</td>
+        <td class="mat"><a href="2026/12-certified-compilation/lecture-notes.pdf">notes</a><a href="2026/12-certified-compilation/slides.pdf">slides</a><a href="2026/12-certified-compilation/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">13</td><td>Type systems</td>
+        <td class="mat"><a href="2026/13-type-systems/lecture-notes.pdf">notes</a><a href="2026/13-type-systems/slides.pdf">slides</a><a href="2026/13-type-systems/lab.pdf">lab</a></td></tr>
+      <tr><td class="wk">14</td><td>Introduction to static analysis</td>
+        <td class="mat"><a href="2026/14-static-analysis/lecture-notes.pdf">notes</a><a href="2026/14-static-analysis/slides.pdf">slides</a><a href="2026/14-static-analysis/lab.pdf">lab</a></td></tr> -->
+    </tbody>
+  </table>
+  <p class="lock">🔒 The notes, slides and lab PDFs are <b>password-protected</b>. The password is
+  shared with enrolled students in class / on Discord.</p>
+  <p class="muted">Course description (<em>fișa disciplinei</em>):
+    <a href="2026/fisa-ISS.pdf">Software Engineering</a> ·
+    <a href="2026/fisa-SAI1.pdf">Advanced Studies in CS 1st year</a> ·
+    <a href="2026/fisa-SAI2.pdf">Advanced Studies in CS 2nd year</a></p>
+  <p class="muted">Homework and project proposals:
+    <a href="projects.pdf">PDF</a></p>
+</section>
+
+<section id="evaluation">
+  <h2>Evaluation</h2>
+  <p>Continuous assessment, out of 100 points. Passing requires at least <b>50%</b>
+  of the maximum of 100 points. There is no final exam and no re-examination.</p>
+  <table>
+    <thead><tr><th>Component</th><th>Points</th></tr></thead>
+    <tbody>
+      <tr><td>Homework — report &amp; Dafny implementation <span class="muted">(midterm, week 8)</span></td><td>30</td></tr>
+      <tr><td>Laboratory worksheets <span class="muted">(weekly)</span></td><td>25</td></tr>
+      <tr><td>Final project — report &amp; implementation <span class="muted">(week 14)</span></td><td>45</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="resources">
+  <h2>Resources &amp; bibliography</h2>
+  <ol class="refs">
+    <li>Boro Sitnikovski. <em>Introducing Software Verification with Dafny Language — Proving Program Correctness.</em>
+      ISBN 978-1-4842-7977-9.</li>
+    <li>Michael Huth, Mark Ryan. <em>Logic in Computer Science: Modelling and Reasoning about Systems.</em>
+      Cambridge University Press.</li>
+    <li>Benjamin C. Pierce. <em>Types and Programming Languages.</em> MIT Press, 2002.</li>
+    <li>Glynn Winskel. <em>The Formal Semantics of Programming Languages — An Introduction.</em> MIT Press, 1993.
+      <a href="https://www.cin.ufpe.br/~if721/intranet/TheFormalSemanticsofProgrammingLanguages.pdf">Online book</a></li>
+    <li>Flemming Nielson, Hanne R. Nielson, Chris Hankin. <em>Principles of Program Analysis.</em> 2nd ed., Springer, 2005.</li>
+    <li>Leslie Lamport. <em>Specifying Systems: The TLA+ Language and Tools.</em> Addison-Wesley, 2002.</li>
+    <li>Thomas Noll. <em>Static Program Analysis.</em> RWTH Aachen, 2016/2017.
+      <a href="https://moves.rwth-aachen.de/teaching/ws-1617/spa/">course page</a></li>
+    <li>University of Pennsylvania, <em>CIS 700: Software Analysis and Testing</em> (Fall 2018).
+      <a href="https://www.cis.upenn.edu/~mhnaik/edu/cis700/">course page</a></li>
+    <li>Maude Manual, 2024. <a href="https://maude.lcc.uma.es/maude-manual/">online</a></li>
+  </ol>
+</section>
+
+<section id="people">
+  <h2>People</h2>
+  <ul>
+    <li><b>Dr. Andrei Arusoaie</b> — course and labs ·
+      <a href="mailto:andrei.arusoaie@uaic.ro">andrei.arusoaie@uaic.ro</a></li>
+  </ul>
+</section>
+
+<section id="years">
+  <h2>Previous years</h2>
+  <p class="muted">Earlier editions:</p>
+  <p class="years">
+    <a href="https://edu.info.uaic.ro/metode-formale-inginerie-software/2025/fmse.html">2025–2026</a>
+    <a href="https://edu.info.uaic.ro/metode-formale-inginerie-software/2024/fmse.html">2024–2025</a>
+  </p>
+</section>
+
+<footer>
+  Formal Methods in Software Engineering · Faculty of Computer Science, Alexandru Ioan Cuza University of Iași.
+</footer>
+
+</div>
+</body>
+</html>
